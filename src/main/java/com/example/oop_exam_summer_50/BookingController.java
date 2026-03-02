@@ -1,5 +1,6 @@
 package com.example.oop_exam_summer_50;
 
+
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -20,8 +21,9 @@ public class BookingController {
         return ResponseEntity.ok().build();
     }
      @PutMapping
-    public ResponseEntity updateBooking(@Validated @RequestBody Book book) {
-        return ResponseEntity.ok().build();
-    }
+    public RequestEntity<Book> updateBooking(@Validated @RequestBody Book book) {
+        return
+     }
+
 
 }
