@@ -1,6 +1,8 @@
 package com.example.oop_exam_summer_50;
 
 import org.springframework.http.RequestEntity;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,12 +13,15 @@ import java.awt.print.Book;
 public class BookingController {
     private BookService BookService;
     public BookingController(BookService bookService) {
-        this.BookService = BookService;
     }
 
     @PutMapping
-    public RequestEntity<BookService> bookservice(@RequestBody BookService bookService) {
-        return
+    public ResponseEntity addBooking(@Validated @RequestBody Book book) {
+        return ResponseEntity.ok().build();
+    }
+     @PutMapping
+    public ResponseEntity updateBooking(@Validated @RequestBody Book book) {
+        return ResponseEntity.ok().build();
     }
 
 }
