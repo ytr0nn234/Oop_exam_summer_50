@@ -2,10 +2,12 @@ package com.example.oop_exam_summer_50;
 
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.SneakyThrows;
+import lombok.Getter;
 import lombok.Setter;
+import jakarta.servlet.annotation.WebServlet;
 
-
+@Getter
+@Setter
 
 public class BookBase {
 
